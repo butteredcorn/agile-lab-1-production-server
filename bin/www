@@ -3,9 +3,9 @@
 /**
  * Module dependencies.
  */
-const app = require('../app');
-const debug = require('debug')('agil-lab-one:server');
-const http = require('http');
+const app   = require('../app'),
+      debug = require('debug')('agil-lab-one:server'),
+      http  = require('http');
 
 /**
  * Get port from environment and store in Express.

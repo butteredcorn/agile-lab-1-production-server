@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		/>
+		<title>Register</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Registration</h1>
+			</div>
+
+			<div class="row justify-content-md-center">
+				<div class="col-md-4">
+					<form method="POST" action="/register">
+						<div class="form-group">
+							<label for="firstNameInput">First Name:</label>
+							<input
+								name="firstname"
+								type="text"
+								id="firstNameInput"
+								class="form-control"
+								placeholder="example: Homer"
+							/>
+						</div>
+
+						<div class="form-group">
+							<label for="lastNameInput">Last Name:</label>
+							<input
+								name="lastname"
+								type="text"
+								id="lastNameInput"
+								class="form-control"
+								placeholder="example: Lee"
+							/>
+						</div>
+
+						<div class="form-group">
+							<label for="emailInput">Email:</label>
+							<input
+								name="email"
+								type="email"
+								id="emailInput"
+								class="form-control"
+								placeholder="example: homerlee@gmail.com"
+							/>
+						</div>
+
+						<div class="form-group">
+							<label for="passwordInput">Set a password:</label>
+							<input
+								name="password"
+								type="text"
+								id="passwordInput"
+								class="form-control"
+								placeholder="Enter your password"
+							/>
+						</div>
+
+						<div class="form-group">
+							<label for="confirmPasswordInput">Confirm Password</label>
+							<input
+								name="password_comfirm"
+								type="password"
+								class="form-control"
+								id="confirmPasswordInput"
+								placeholder="Re-enter your password here"
+							/>
+						</div>
+
+						<button type="submit" class="btn btn-primary">Confirm</button>
+					</form>
+				</div>
+			</div>
+			<div class="text-right">
+				<p>Already a member?</p>
+				<a class="text-body" href="login.html">Click here to log in</a>
+			</div>
+		</div>
+	</body>
+</html>

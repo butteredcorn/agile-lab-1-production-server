@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		/>
+		<title>Login</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Log In As a Member</h1>
+			</div>
+
+			<div class="row justify-content-md-center">
+				<div class="col-md-6">
+					<form method="POST" action="/login">
+						<div class="form-group">
+							<label for="firstName">First Name:</label>
+							<input
+								name="firstname"
+								type="text"
+								id="firstName"
+								class="form-control"
+								placeholder="example: Homer"
+							/>
+						</div>
+
+						<div class="form-group">
+							<label for="lastName">Last Name:</label>
+							<input
+								name="lastname"
+								type="text"
+								id="lastName"
+								class="form-control"
+								placeholder="example: Lee"
+							/>
+						</div>
+
+						<div class="form-group">
+							<label>Password:</label>
+							<input
+								name="password"
+								type="text"
+								id="password"
+								class="form-control"
+							/>
+						</div>
+
+						<button type="submit" class="btn btn-primary">Login</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="text-center">
+				<p>Not yet a member?</p>
+				<a class="text-body" href="register.html">Click here to register</a>
+			</div>
+		</div>
+	</body>
+</html>

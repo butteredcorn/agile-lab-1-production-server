@@ -1,7 +1,7 @@
 
-const convertBtn = document.querySelector('#convert');
-const inputEle = document.querySelector('#input_temp');
-const convertedEle = document.querySelector('#converted');
+const convertBtn    = document.querySelector('#convert');
+const inputEle      = document.querySelector('#input_temp');
+const convertedEle  = document.querySelector('#converted');
 
 convertBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -21,6 +21,7 @@ convertBtn.addEventListener('click', (event) => {
 
         fetch('/', {
             method: "POST",
+            credentials: 'include',
             body:JSON.stringify({'temp':temp, 'isCToF':isCToF}),
             headers:{"Content-Type":"application/json"}
         })

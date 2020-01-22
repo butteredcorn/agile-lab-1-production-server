@@ -1,7 +1,7 @@
-const fs = require("fs");
+const fs      = require("fs");
 
-let getLines = function getLines(filename, lineCount, callback) {
-  let stream = fs.createReadStream(filename, {
+let getLines  = function getLines(filename, lineCount, callback) {
+  let stream  = fs.createReadStream(filename, {
     flags: "r",
     encoding: "utf-8",
     fd: null,
