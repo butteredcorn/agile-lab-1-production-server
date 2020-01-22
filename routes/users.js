@@ -8,7 +8,7 @@ fs = require("fs");
 
 //render to user homepage
 router
-	.route("/protected")
+	.route("/users/protected")
 	.get((req, res, next) => {
 		console.log("in protected");
 		if (req.user) {
