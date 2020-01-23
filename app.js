@@ -16,11 +16,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //authentication setup
-app.use(session({ secret: '********' }));
-app.use(flash());
+//express session for retrieving user session data from datastore
+app.use(session({ secret: '********' })); 
 app.use(passport.initialize());
+//passport session for deserializing user object from session
 app.use(passport.session());
-
+app.use(flash());
 // caching disabled for every route => prevent back botton to access cached stricted page
 app.use(function(req, res, next) {
     res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
@@ -31,11 +32,6 @@ app.use(function(req, res, next) {
 app.use('/users', userRouter);
 app.use('/', indexRouter);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    next(createError(404));
-});
-
 // error handler
 app.use(function(err, req, res, next) {
     // set locals, only providing error in development
@@ -44,7 +40,7 @@ app.use(function(err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
-    res.send('<h1>' + err.message + '</h1>');
+    res.write('<h1>' + err.message + '</h1>');
 });
 
 module.exports = app;

@@ -1,4 +1,4 @@
-const fs = require("fs").promises;
+// const fs = require("fs").promises;
 
 const c_to_f = num => {
   //(0°C × 9/5) + 32 = 32°F
